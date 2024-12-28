@@ -55,14 +55,22 @@ struct PageView<PageViewType: View>: View {
                     ScrollView(.horizontal) {
                         pageStack(for: geo)
                     }
+                    .scrollDisabled(true)
                     .onReceive(Just(currentPageIndex), perform: {
                         setPageIndex(to: $0.wrappedValue, with: scroll)
                     })
-                    .overlay(swipeLayer(for: scroll))
-                    .overlay(bugfixLayer(for: scroll))
+                    .onSwipeGesture(
+                        left: {
+                            showNextPage(with: scroll)
+                        },
+                        right: {
+                            showPreviousPage(with: scroll)
+                        })
                 }
                 pageIndicator
-                
+                    .background(Color.yellow)
+                    .padding(.top) // Adjust for safe area
+                    .padding(.leading, geo.safeAreaInsets.leading) // Adjust for safe area
             }
         }
     }
@@ -109,7 +117,7 @@ private extension PageView {
                 right: { showPreviousPage(with: scroll) })
         #endif
     }
-    
+
     func swipeLayerView(for scroll: ScrollViewProxy) -> some View {
         Color.white.opacity(0.00001)
     }
@@ -141,4 +149,19 @@ private extension PageView {
         guard currentPageIndex.wrappedValue > 0 else { return }
         setPageIndex(to: currentPageIndex.wrappedValue - 1, with: scroll)
     }
+}
+
+#Preview {
+    PageView(
+        pages: [
+            Color.red,
+            Color.green,
+            Color.blue
+        ],
+        currentPageIndex: .constant(0),
+        pageIndicatorDisplayMode: .always,
+        pageIndicatorStyle: .standard
+    )
+    //.ignoresSafeArea()
+    .previewLayout(.sizeThatFits)
 }

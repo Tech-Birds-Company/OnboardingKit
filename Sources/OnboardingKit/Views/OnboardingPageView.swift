@@ -59,16 +59,6 @@ public struct OnboardingPageView<Page, Content: View>: View {
 private extension OnboardingPageView {
 
     var bodyContent: some View {
-        #if os(iOS)
-        TabView(selection: $pageIndex) {
-            ForEach(
-                Array(pages.enumerated()),
-                id: \.offset,
-                content: content
-            )
-        }
-        .tabViewStyle(.page(indexDisplayMode: .always))
-        #else
         PageView(
             pages: Array(pages.enumerated()),
             currentPageIndex: $pageIndex,
@@ -79,7 +69,6 @@ private extension OnboardingPageView {
             ),
             pageBuilder: content
         )
-        #endif
     }
 
     func content(
