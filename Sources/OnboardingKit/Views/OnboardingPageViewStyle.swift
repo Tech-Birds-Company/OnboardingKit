@@ -18,6 +18,8 @@ import SwiftUI
 /// ```
 public struct OnboardingPageViewStyle {
 
+    
+
     /// Create an onboarding page view style.
     ///
     /// - Parameters:
@@ -25,10 +27,14 @@ public struct OnboardingPageViewStyle {
     ///   - currentPageIndicatorTintColor: The color of the current page indicator, by default `.primary`.
     public init(
         pageIndicatorTintColor: Color = .primary.opacity(0.3),
-        currentPageIndicatorTintColor: Color = .primary
+        currentPageIndicatorTintColor: Color = .primary,
+        currentDotSize: CGFloat = 4,
+        dotSize: CGFloat = 4
     ) {
         self.pageIndicatorTintColor = pageIndicatorTintColor
         self.currentPageIndicatorTintColor = currentPageIndicatorTintColor
+        self.currentDotSize = currentDotSize
+        self.dotSize = dotSize
     }
 
     /// The page indicator color to use.
@@ -36,6 +42,10 @@ public struct OnboardingPageViewStyle {
 
     /// The color of the current page indicator.
     public var currentPageIndicatorTintColor: Color
+
+    public var currentDotSize: CGFloat = 4
+
+    public var dotSize: CGFloat = 4
 }
 
 public extension OnboardingPageViewStyle {

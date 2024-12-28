@@ -56,10 +56,10 @@ struct PageIndicator: View {
                 Button {
                     setCurrentPage(index)
                 } label: {
-                    Circle()
-                        .aspectRatio(1, contentMode: .fit)
-                        .frame(height: isCurrentPage(index) ? style.currentDotSize : style.dotSize)
+                    Rectangle()
+                        .frame(width: isCurrentPage(index) ? style.currentDotSize : style.dotSize, height: style.dotSize)
                         .foregroundColor(isCurrentPage(index) ? style.currentDotColor : style.dotColor)
+                        .cornerRadius(style.dotSize / 2)
                 }
                 .buttonStyle(.plain)
             }

@@ -65,7 +65,9 @@ private extension OnboardingPageView {
             pageIndicatorDisplayMode: .always,
             pageIndicatorStyle: .init(
                 dotColor: style.pageIndicatorTintColor,
-                currentDotColor: style.currentPageIndicatorTintColor
+                dotSize: style.dotSize,
+                currentDotColor: style.currentPageIndicatorTintColor,
+                currentDotSize: style.currentDotSize
             ),
             pageBuilder: content
         )

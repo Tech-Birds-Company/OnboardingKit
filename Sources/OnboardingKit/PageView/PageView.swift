@@ -50,7 +50,7 @@ struct PageView<PageViewType: View>: View {
     
     var body: some View {
         GeometryReader { geo in
-            ZStack(alignment: .bottom) {
+            ZStack(alignment: .topLeading) {
                 ScrollViewReader { scroll in
                     ScrollView(.horizontal) {
                         pageStack(for: geo)
@@ -68,7 +68,6 @@ struct PageView<PageViewType: View>: View {
                         })
                 }
                 pageIndicator
-                    .background(Color.yellow)
                     .padding(.top) // Adjust for safe area
                     .padding(.leading, geo.safeAreaInsets.leading) // Adjust for safe area
             }

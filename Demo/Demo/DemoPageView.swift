@@ -33,7 +33,9 @@ struct DemoPageView: View {
         .onboardingPageViewStyle(
             .init(
                 pageIndicatorTintColor: .white.opacity(0.3),
-                currentPageIndicatorTintColor: .yellow
+                currentPageIndicatorTintColor: .yellow,
+                currentDotSize: 20,
+                dotSize: 4
             )
         )
     }
