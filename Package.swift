@@ -4,6 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "OnboardingKit",
+    defaultLocalization: "en",
     platforms: [
         .iOS(.v16),
         .macOS(.v12),
@@ -19,7 +20,8 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "OnboardingKit"
+            name: "OnboardingKit",
+            resources: [.process("Resources")]
         ),
         .testTarget(
             name: "OnboardingKitTests",

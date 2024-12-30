@@ -15,7 +15,10 @@ import Combine
 /// You can set it up with a fixed set of `pages`, or with a
 /// set of `items` to which you apply a dynamic page builder.
 struct PageView<PageViewType: View>: View {
-    
+
+    @Environment(\.dismiss)
+    private var dismiss
+
     /// Create a page view with a set of pre-built pages.
     init(
         pages: [PageViewType],
@@ -71,8 +74,11 @@ struct PageView<PageViewType: View>: View {
                     pageIndicator
                         .padding(.leading, 16) // Adjust for safe area
                     Spacer()
-                    Button("Пропустить", action: {})
-                        .padding(.trailing, 16)
+                    Button(String(localized: "skip", bundle: .module), action: {
+                        self.dismiss()
+                    })
+                    .tint(.black)
+                    .padding(.trailing, 16)
                 }
 
             }
