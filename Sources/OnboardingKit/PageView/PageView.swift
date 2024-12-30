@@ -67,9 +67,14 @@ struct PageView<PageViewType: View>: View {
                             showPreviousPage(with: scroll)
                         })
                 }
-                pageIndicator
-                    .padding(.top) // Adjust for safe area
-                    .padding(.leading, geo.safeAreaInsets.leading) // Adjust for safe area
+                HStack {
+                    pageIndicator
+                        .padding(.leading, 16) // Adjust for safe area
+                    Spacer()
+                    Button("Пропустить", action: {})
+                        .padding(.trailing, 16)
+                }
+
             }
         }
     }

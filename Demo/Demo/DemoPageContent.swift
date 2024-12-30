@@ -19,32 +19,49 @@ struct DemoPageContent: View {
     private var dismiss
 
     var body: some View {
-        VStack(spacing: 20) {
-            image
-            Text(info.page.title)
-                .font(.title)
-            Text(info.page.text)
-        }
-        .padding(30)
-        .frame(maxWidth: .infinity)
-        .background()
-        .clipShape(.rect(cornerRadius: 10))
-        .shadow(radius: 1, y: 1)
-        .frame(maxHeight: .infinity)
-        .multilineTextAlignment(.center)
-        .scaleEffect(info.isCurrentPage ? 1 : 0.5)
-        .animation(.bouncy, value: index)
-        .padding()
-        .safeAreaInset(edge: .bottom) {
-            Button(info.isLastPage ? "Done" : "Next") {
-                if info.isLastPage { return dismiss() }
-                withAnimation {
-                    index += 1
+        GeometryReader { geometry in
+            VStack(spacing: 50) {
+                ZStack {
+                    Rectangle()
+                        .foregroundStyle(Color.yellow)
+                    image
                 }
+                .padding(.horizontal, 16)
+
+                .frame(height: geometry.size.height  * 2/3)
+                VStack(alignment: .leading, spacing: 16) {
+                    Text(info.page.title)
+                        .font(.title)
+                        .multilineTextAlignment(.leading)
+                    Text(info.page.text)
+                        .multilineTextAlignment(.leading)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.horizontal, 16)
+
             }
-            .buttonStyle(.borderedProminent)
-            .shadow(radius: 1, y: 1)
-            .padding()
+            .safeAreaInset(edge: .bottom, content: {
+                ZStack {
+                    Color.init(uiColor: UIColor(red: 162/255, green: 86/255, blue: 217/255, alpha: 1))
+                        .cornerRadius(8)
+                        .frame(height: 50)
+                    Button(info.isLastPage ? "Done" : "Next") {
+                        if info.isLastPage { return dismiss() }
+                        withAnimation {
+                            index += 1
+                        }
+                    }
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 50)
+                    .tint(.white)
+                    .shadow(radius: 1, y: 1)
+                    .padding()
+                }
+                .frame(height: 50)
+                .padding()
+            })
+            .background()
+            .animation(.bouncy, value: index)
         }
     }
 }
@@ -55,8 +72,6 @@ private extension DemoPageContent {
         Image(systemName: "\(info.pageIndex).circle")
             .resizable()
             .aspectRatio(contentMode: .fit)
-            .frame(maxWidth: 150)
-            .padding(.bottom, 20)
     }
 }
 
@@ -78,8 +93,8 @@ private extension DemoPageContent {
                     index: $index,
                     info: .init(
                         page: .init(
-                            title: "Foo",
-                            text: "Bar",
+                            title: "Добро пожаловать",
+                            text: "Храните весь свой гардероб",
                             imageName: "onboarding.demo-flow.0.image"
                         ),
                         pageIndex: 1,

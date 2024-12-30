@@ -95,7 +95,7 @@ struct ContentView: View {
                         "Present an onboarding page view",
                         "This onboarding flow lets you swipe through a set of pages."
                     )
-                    .sheet(isPresented: $isPageViewPresented) {
+                    .fullScreenCover(isPresented: $isPageViewPresented) {
                         DemoPageView(
                             onboarding: .demo,
                             index: $pageViewPageIndex

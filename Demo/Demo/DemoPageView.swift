@@ -26,7 +26,7 @@ struct DemoPageView: View {
                 index: $index,
                 info: info
             )
-            .padding(.bottom, 50)
+            .padding(.top, 40)
         }
         .background(DemoPageBackground(index: index))
         .onDisappear { index = 0 }
