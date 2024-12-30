@@ -21,7 +21,11 @@ let package = Package(
     targets: [
         .target(
             name: "OnboardingKit",
-            resources: [.process("Resources")]
+            resources: [.process("Resources")],
+            swiftSettings: [
+                .define("LOCALIZATION_PREFERS_STRING_CATALOGS=YES"),
+                .define("SWIFT_EMIT_LOC_STRINGS=YES")
+            ]
         ),
         .testTarget(
             name: "OnboardingKitTests",

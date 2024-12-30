@@ -1,0 +1,94 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Done" : {
+
+    },
+    "Flows" : {
+
+    },
+    "Next" : {
+
+    },
+    "onboarding.demo-flow.0.text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OnboardingKit can resolve pages by parsing localized strings."
+          }
+        }
+      }
+    },
+    "onboarding.demo-flow.0.title" : {
+      "comment" : "Localizable.strings\n  OnboardingKit\n\n  Created by Daniel Saidi on 2021-09-23.\n  Copyright © 2021-2024 Daniel Saidi. All rights reserved.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Localized onboardings"
+          }
+        }
+      }
+    },
+    "onboarding.demo-flow.1.text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Just add and remove pages in Localizable.strings to update the flow."
+          }
+        }
+      }
+    },
+    "onboarding.demo-flow.1.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatic page count"
+          }
+        }
+      }
+    },
+    "onboarding.demo-flow.2.text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can use OnboardingPageView and OnboardingSlideshow to easily display localized onboardings."
+          }
+        }
+      }
+    },
+    "onboarding.demo-flow.2.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "That's it"
+          }
+        }
+      }
+    },
+    "OnboardingKit" : {
+
+    },
+    "Onboardings" : {
+
+    },
+    "Reset onboarding state" : {
+
+    },
+    "Use modal onboarding screens to show more complex onboardings, like page views or slideshows." : {
+
+    }
+  },
+  "version" : "1.0"
+}

@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88AC20E52D2326EC00CF5FB3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 88AC20E42D2326EC00CF5FB3 /* Localizable.xcstrings */; };
 		A915F3F82B9F2BF300A50849 /* DemoPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915F3F72B9F2BF300A50849 /* DemoPageView.swift */; };
 		A91D17442C06697000721C94 /* DemoPageBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91D17432C06697000721C94 /* DemoPageBackground.swift */; };
 		A922B1F726FC73FF00E235A1 /* DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A922B1F626FC73FF00E235A1 /* DemoApp.swift */; };
 		A922B1F926FC73FF00E235A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A922B1F826FC73FF00E235A1 /* ContentView.swift */; };
 		A922B1FB26FC740000E235A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A922B1FA26FC740000E235A1 /* Assets.xcassets */; };
 		A922B1FE26FC740000E235A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A922B1FD26FC740000E235A1 /* Preview Assets.xcassets */; };
-		A922B22226FC741900E235A1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A922B22426FC741900E235A1 /* Localizable.strings */; };
 		A922B22E26FC829400E235A1 /* Onboarding+Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A922B22D26FC829400E235A1 /* Onboarding+Demo.swift */; };
 		A922B23026FC9F4400E235A1 /* Image+Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A922B22F26FC9F4400E235A1 /* Image+Demo.swift */; };
 		A96AA2E62B28383A00A6F6E8 /* OnboardingKit in Frameworks */ = {isa = PBXBuildFile; productRef = A96AA2E52B28383A00A6F6E8 /* OnboardingKit */; };
@@ -22,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		88AC20E42D2326EC00CF5FB3 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		A915F3F72B9F2BF300A50849 /* DemoPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoPageView.swift; sourceTree = "<group>"; };
 		A91D17432C06697000721C94 /* DemoPageBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoPageBackground.swift; sourceTree = "<group>"; };
 		A922B1F326FC73FF00E235A1 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,7 +30,6 @@
 		A922B1F826FC73FF00E235A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A922B1FA26FC740000E235A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A922B1FD26FC740000E235A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A922B22326FC741900E235A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A922B22D26FC829400E235A1 /* Onboarding+Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Onboarding+Demo.swift"; sourceTree = "<group>"; };
 		A922B22F26FC9F4400E235A1 /* Image+Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Demo.swift"; sourceTree = "<group>"; };
 		A98B1A512C05A64300690057 /* DemoPageContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoPageContent.swift; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 				A922B22D26FC829400E235A1 /* Onboarding+Demo.swift */,
 				A922B1FA26FC740000E235A1 /* Assets.xcassets */,
 				A922B1FC26FC740000E235A1 /* Preview Content */,
-				A922B22426FC741900E235A1 /* Localizable.strings */,
+				88AC20E42D2326EC00CF5FB3 /* Localizable.xcstrings */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -156,7 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A922B1FE26FC740000E235A1 /* Preview Assets.xcassets in Resources */,
-				A922B22226FC741900E235A1 /* Localizable.strings in Resources */,
+				88AC20E52D2326EC00CF5FB3 /* Localizable.xcstrings in Resources */,
 				A922B1FB26FC740000E235A1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,17 +180,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		A922B22426FC741900E235A1 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A922B22326FC741900E235A1 /* en */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A922B21526FC740000E235A1 /* Debug */ = {
@@ -246,6 +235,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -253,6 +243,7 @@
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -305,12 +296,14 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
